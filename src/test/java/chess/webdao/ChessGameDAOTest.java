@@ -1,7 +1,6 @@
 package chess.webdao;
 
 import chess.domain.ChessGame;
-import chess.domain.Position;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;

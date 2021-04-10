@@ -4,6 +4,7 @@ import chess.service.ChessService;
 import chess.webdto.*;
 import com.google.gson.Gson;
 import spark.ModelAndView;
+import spark.Service;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.sql.SQLException;
@@ -24,6 +25,8 @@ public class WebChessController {
 
     public void run() {
         staticFileLocation("/public");
+        final Service ignite = Service.ignite();
+        ignite.ipAddress("13.124.213.29");
 
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
