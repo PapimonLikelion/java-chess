@@ -24,7 +24,6 @@ public class WebChessController {
 
     public void run() {
         staticFileLocation("/public");
-        port(80);
 
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
