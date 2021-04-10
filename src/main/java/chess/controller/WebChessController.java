@@ -24,7 +24,8 @@ public class WebChessController {
 
     public void run() {
         staticFileLocation("/public");
-        ipAddress("172.31.7.149");
+//        ipAddress("172.31.7.149");
+        ipAddress("127.0.0.1");
         port(8080);
 
         get("/", (req, res) -> {
