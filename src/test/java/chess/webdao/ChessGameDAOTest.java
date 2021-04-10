@@ -36,14 +36,6 @@ public class ChessGameDAOTest {
     }
 
     @Test
-    public void updateChessGameDB() throws SQLException {
-        final ChessGameDAO chessGameDAO = new ChessGameDAO();
-        final ChessGame chessGame = chessGameDAO.readChessGame();
-        chessGame.move(Position.of("e2"), Position.of("e4"));
-        chessGameDAO.updateChessGame(chessGame, "black");
-    }
-
-    @Test
     public void deleteChessGameDB() throws SQLException {
         final ChessGameDAO chessGameDAO = new ChessGameDAO();
         chessGameDAO.deleteChessGame();
